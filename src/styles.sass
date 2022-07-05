@@ -1,18 +1,40 @@
 *
   box-sizing: border-box
+  font-family: 'Inter', system-ui
 
 body
   margin: 0
-  font-family: 'Inter', system-ui
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   background-color: #e7f6ff
+
+button, input
 
 ul
   margin: 0
   padding: 0
   li
     list-style-type: none
+
+.green-button
+  width: 100%
+  height: 55px
+  padding: 18px 21px
+  background-color: #9DD458
+  color: #fff
+  border: none
+  border-radius: 18px
+  outline: none
+  cursor: pointer
+  transition: all 0.3s ease
+  font-size: 16px
+  font-weight: 600
+  &:hover
+    background-color: darken(#9DD458, 10%)
+    &:active
+      background-color: darken(#9DD458, 15%)
+      transform: translateY(1px)
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.09)
 
 .wrapper
   max-width: 1080px
@@ -22,6 +44,103 @@ ul
   margin: 50px auto
   padding: 30px
 
+.drawer-overlay
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.1)
+  z-index: 1
+  width: 100%
+  height: 100%
+.drawer
+  display: flex
+  flex-direction: column
+  position: absolute
+  width: 420px
+  height: 100%
+  right: 0
+  padding: 30px
+  background: #FFFFFF
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
+  z-index: 2
+  h2
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 24px
+    margin: 0 0 30px 0
+    img
+      opacity: 0.5
+      cursor: pointer
+      transition: all 0.3s ease
+      &:hover
+        opacity: 1
+  .items
+    overflow: auto
+    margin: 0 0 35px 0
+    flex: 1
+  .cart-item
+    display: flex
+    align-items: center
+    border: 1px solid #f3f3f3
+    border-radius: 20px
+    overflow: hidden
+    padding: 20px
+    &:not(:last-child)
+      margin: 0 0 20px 0
+    &__image
+      width: 70px
+      height: 70px
+      background-size: contain
+      background-position: 0 -5px
+      background-repeat: no-repeat
+      margin: 0 20px 0 0
+      flex-shrink: 0
+    &__info
+      display: flex
+      flex-wrap: wrap
+      margin: 0 20px 0 0
+      p
+        margin: 0
+        font-size: 16px
+      b
+        font-size: 14px
+    .remove-btn
+      opacity: 0.5
+      cursor: pointer
+      transition: all 0.3s ease
+      &:hover
+        opacity: 1
+  &-info
+    &__block
+      margin: 0 0 24px 0
+      li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: 8px
+        &:not(:last-child)
+          margin: 0 0 20px 0
+        div
+          position: relative
+          top: -3px
+          flex: 1
+          height: 1px
+          border-bottom: 1px dashed #dfdfdf
+          align-self: flex-end
+    .green-button
+      position: relative
+      &:hover
+        img
+          transform: translateY(-50%) translateX(5px)
+      img
+        position: absolute
+        top: 50%
+        right: 30px
+        transform: translateY(-50%)
+        transition: all 0.2s ease
 .header
   display: flex
   align-items: center
@@ -46,11 +165,11 @@ ul
   &-right
     display: flex
     align-items: center
+    column-gap: 20px
     li
       display: flex
       align-items: center
     li:nth-child(1)
-      margin: 0 20px 0 0
       img
         margin: 0 10px 0 0
       span
@@ -60,22 +179,51 @@ ul
 
 .content
   padding: 40px
-  &-title
+  &-header
+    display: flex
+    align-items: center
+    justify-content: space-between
     margin: 0 0 35px 0
+  &-title
+    font-size: 32px
+    font-weight: bold
+    margin: 0
+  .search
+    display: flex
+    align-items: center
+    border: 1px solid #ccc
+    border-radius: 15px
+    padding: 0 15px
+    input
+      width: 200px
+      padding: 13px
+      border: 0
+      font-size: 16px
+      outline: none
 
 .sneakers
   display: flex
   flex-wrap: wrap
   gap: 20px
+
   .card
+    position: relative
     display: flex
     flex-direction: column
     align-items: center
     justify-content: space-between
     width: 220px
-    padding: 20px
-    border: 1px solid #ccc
+    padding: 30px
+    border: 1px solid #e4e4e4
     border-radius: 40px
+    transition: all 0.3s ease
+    &:hover
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06)
+      transform: translateY(-4px)
+    .favorite
+      align-self: flex-start
+      position: absolute
+      cursor: pointer
     h5
       font-size: 14px
       font-weight: 400
@@ -96,9 +244,12 @@ ul
       b
         font-size: 14px
     button
+      display: flex
+      align-items: center
+      justify-content: center
       width: 32px
       height: 32px
-      border: 1px solid #ccc
+      border: 1px solid #f2f2f2
       border-radius: 8px
       cursor: pointer
       background-color: #fff

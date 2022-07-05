@@ -2,6 +2,74 @@ function App() {
     return (
         <div className="App">
             <div className="wrapper">
+                <div className="drawer-overlay">
+                    <div className="drawer">
+                        <h2>
+                            Корзина
+                            <img
+                                className="remove-btn"
+                                src="/img/btn-remove.svg"
+                                alt="remove"
+                            />
+                        </h2>
+                        <div className="items">
+                            <div className="cart-item">
+                                <div
+                                    style={{
+                                        backgroundImage:
+                                            "url(/img/sneakers/1.jpg",
+                                    }}
+                                    className="cart-item__image"></div>
+
+                                <div className="cart-item__info">
+                                    <p>Мужские Кроссовки Nike Air Max 270</p>
+                                    <b>12 999 грн.</b>
+                                </div>
+                                <img
+                                    className="remove-btn"
+                                    src="/img/btn-remove.svg"
+                                    alt="remove"
+                                />
+                            </div>
+                            <div className="cart-item">
+                                <div
+                                    style={{
+                                        backgroundImage:
+                                            "url(/img/sneakers/1.jpg",
+                                    }}
+                                    className="cart-item__image"></div>
+
+                                <div className="cart-item__info">
+                                    <p>Мужские Кроссовки Nike Air Max 270</p>
+                                    <b>12 999 грн.</b>
+                                </div>
+                                <img
+                                    className="remove-btn"
+                                    src="/img/btn-remove.svg"
+                                    alt="remove"
+                                />
+                            </div>
+                        </div>
+                        <div className="drawer-info">
+                            <ul className="drawer-info__block">
+                                <li>
+                                    <span>Итого</span>
+                                    <div></div>
+                                    <b>21 220 грн.</b>
+                                </li>
+                                <li>
+                                    <span>Налог 5%</span>
+                                    <div></div>
+                                    <b>1070 грн.</b>
+                                </li>
+                            </ul>
+                            <button className="green-button">
+                                Оформить заказ{" "}
+                                <img src="/img/arrow.svg" alt="icon: arrow" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <header className="header">
                     <div className="header-left">
                         <img
@@ -29,6 +97,14 @@ function App() {
                             <img
                                 width={18}
                                 height={18}
+                                src="/img/header-favorite.svg"
+                                alt="icon: user"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                width={18}
+                                height={18}
                                 src="/img/header-user.svg"
                                 alt="icon: user"
                             />
@@ -37,9 +113,21 @@ function App() {
                 </header>
                 <main>
                     <div className="content">
-                        <h1 className="content-title">Все кроссовки</h1>
+                        <div className="content-header">
+                            <h1 className="content-title">Все кроссовки</h1>
+                            <div className="search">
+                                <img src="/img/search.png" alt="icon: search" />
+                                <input type="text" placeholder="Поиск..." />
+                            </div>
+                        </div>
                         <div className="sneakers">
                             <div className="card">
+                                <div className="favorite">
+                                    <img
+                                        src="/img/heart-unliked.svg"
+                                        alt="icon: heart"
+                                    />
+                                </div>
                                 <img
                                     width={133}
                                     height={112}
@@ -54,19 +142,23 @@ function App() {
                                     </div>
                                     <button>
                                         <img
-                                            width={11}
-                                            height={11}
-                                            src="img/card-plus.svg"
+                                            src="img/btn-plus.svg"
                                             alt="icon: plus"
                                         />
                                     </button>
                                 </div>
                             </div>
                             <div className="card">
+                                <div className="favorite">
+                                    <img
+                                        src="/img/heart-unliked.svg"
+                                        alt="icon: heart"
+                                    />
+                                </div>
                                 <img
                                     width={133}
                                     height={112}
-                                    src="img/sneakers/1.jpg"
+                                    src="img/sneakers/2.jpg"
                                     alt="sneakers"
                                 />
                                 <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
@@ -77,19 +169,23 @@ function App() {
                                     </div>
                                     <button>
                                         <img
-                                            width={11}
-                                            height={11}
-                                            src="img/card-plus.svg"
+                                            src="img/btn-plus.svg"
                                             alt="icon: plus"
                                         />
                                     </button>
                                 </div>
                             </div>
                             <div className="card">
+                                <div className="favorite">
+                                    <img
+                                        src="/img/heart-unliked.svg"
+                                        alt="icon: heart"
+                                    />
+                                </div>
                                 <img
                                     width={133}
                                     height={112}
-                                    src="img/sneakers/1.jpg"
+                                    src="img/sneakers/3.jpg"
                                     alt="sneakers"
                                 />
                                 <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
@@ -100,19 +196,23 @@ function App() {
                                     </div>
                                     <button>
                                         <img
-                                            width={11}
-                                            height={11}
-                                            src="img/card-plus.svg"
+                                            src="img/btn-plus.svg"
                                             alt="icon: plus"
                                         />
                                     </button>
                                 </div>
                             </div>
                             <div className="card">
+                                <div className="favorite">
+                                    <img
+                                        src="/img/heart-unliked.svg"
+                                        alt="icon: heart"
+                                    />
+                                </div>
                                 <img
                                     width={133}
                                     height={112}
-                                    src="img/sneakers/1.jpg"
+                                    src="img/sneakers/4.jpg"
                                     alt="sneakers"
                                 />
                                 <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
@@ -123,9 +223,7 @@ function App() {
                                     </div>
                                     <button>
                                         <img
-                                            width={11}
-                                            height={11}
-                                            src="img/card-plus.svg"
+                                            src="img/btn-plus.svg"
                                             alt="icon: plus"
                                         />
                                     </button>
