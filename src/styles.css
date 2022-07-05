@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+.wrapper {
+  max-width: 1080px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  margin: 50px auto;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 0 0 30px 0;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  row-gap: 10px;
+}
+.header-left img {
+  margin: 0 15px 0 0;
+}
+.header-left div h3, .header-left div p {
+  margin: 0;
+}
+.header-left div h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-left div p {
+  font-size: 14px;
+  opacity: 0.5;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.header-right li {
+  display: flex;
+  align-items: center;
+}
+.header-right li:nth-child(1) {
+  margin: 0 20px 0 0;
+}
+.header-right li:nth-child(1) img {
+  margin: 0 10px 0 0;
+}
+.header-right li:nth-child(1) span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5C5C5C;
+}
+
+.content {
+  padding: 40px;
+}
+.content-title {
+  margin: 0 0 35px 0;
+}
+
+.sneakers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sneakers .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+.sneakers .card h5 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+}
+.sneakers .card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sneakers .card-price {
+  display: flex;
+  flex-direction: column;
+}
+.sneakers .card-price span {
+  font-size: 13px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.sneakers .card-price b {
+  font-size: 14px;
+}
+.sneakers .card button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+}/*# sourceMappingURL=styles.css.map */
