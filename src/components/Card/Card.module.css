@@ -1,0 +1,47 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+  padding: 30px;
+  border: 1px solid #e4e4e4;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+.card .favorite {
+  align-self: flex-start;
+  position: absolute;
+  cursor: pointer;
+}
+.card h5 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+}
+.card .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.card .bottom .price {
+  display: flex;
+  flex-direction: column;
+}
+.card .bottom .price span {
+  font-size: 13px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.card .bottom .price b {
+  font-size: 14px;
+}
+.card .bottom .plus {
+  cursor: pointer;
+}/*# sourceMappingURL=Card.module.css.map */
