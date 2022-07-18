@@ -229,6 +229,7 @@ ul li {
   margin: 0;
 }
 .content .search {
+  position: relative;
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
@@ -241,6 +242,15 @@ ul li {
   border: 0;
   font-size: 16px;
   outline: none;
+}
+.content .search .remove-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .sneakers {
